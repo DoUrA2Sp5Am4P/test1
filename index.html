@@ -14,8 +14,15 @@ body {
 <script>
 "use strict";
 vkBridge.send("VRWebInit", {});
-bridge.send("VKWebAppShowInviteBox", {})
-         .then(data => console.log(data.success))  
-        .catch(error => console.log(error));
+bridge.send('VKWebAppAddToFavorites')
+  .then((data) => { 
+    if (data.result) {
+      // Мини-приложение или игра добавлены в избранное
+    }
+  })
+  .catch((error) => {
+    // Ошибка
+    console.log(error);
+  });
 </body>
 </html>
