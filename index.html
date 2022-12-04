@@ -14,15 +14,8 @@ body {
 <script>
 "use strict";
 vkBridge.send("VRWebInit", {});
-bridge.send('VKWebAppRecommend')
-  .then((data) => { 
-    if (data.result) {
-      console.log("a555");
-    }
-  })
-  .catch((error) => {
-    // Ошибка
-    console.log(error);
-  });
+bridge.send("VKWebAppShowInviteBox", {})
+         .then(data => console.log(data.success))  
+        .catch(error => console.log(error));
 </body>
 </html>
