@@ -14,7 +14,7 @@ body {
 <script>
 "use strict";
 vkBridge.send("VRWebInit", {});
-bridge.send('VKWebAppAddToFavorites')
+vkBbridge.send('VKWebAppAddToFavorites')
   .then((data) => { 
     if (data.result) {
       // Мини-приложение или игра добавлены в избранное
