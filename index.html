@@ -14,17 +14,16 @@ body {
 <script>
 "use strict";
 vkBridge.send("VRWebInit", {});
-vkBridge.send('VKWebAppAddToProfile', {
-  ttl: 0
-  })
+vkBridge.send('VKWebAppAddToFavorites')
   .then((data) => { 
-    if (data.visibility) {
-      console.log("OK");
+    if (data.result) {
+	    console.log("OK");
+      // Мини-приложение или игра добавлены в избранное
     }
   })
   .catch((error) => {
+	console.log("error");
     // Ошибка
-    console.log("error");
   });
 	</script>
 </body>
