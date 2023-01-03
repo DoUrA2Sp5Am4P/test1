@@ -17,10 +17,12 @@ vkBridge.send("VRWebInit", {});
 vkBridge.send('VKWebAppAddToFavorites')
   .then((data) => { 
     if (data.result) {
+	    console.log("OK");
       // Мини-приложение или игра добавлены в избранное
     }
   })
   .catch((error) => {
+	console.log("error");
     // Ошибка
   });
 	</script>
